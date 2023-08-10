@@ -2,71 +2,36 @@
 <html lang="en">
 
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-   <link rel="stylesheet" href="css/bootstrap.css">
-   <link rel="stylesheet" type="text/css" href="estilos.css">
-   <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-   <!-- <link rel="stylesheet" href="css/all.min.css"> -->
-   <!-- <link rel="stylesheet" href="css/fontawesome.min.css"> -->
-   <link href="https://tresplazas.com/web/img/big_punto_de_venta.png" rel="shortcut icon">
-   <title>Inicio de sesión</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9a726f2fb1.js" crossorigin="anonymous"></script>
+    <title>Ini</title>
 </head>
 
 <body>
-    <div class="background-image">
-<img src="imagenes/23918.png" alt="">
-     </div>
-   <div class="container">
-      <div class="img">
-         <img src="imagenes/avatar.jpg">
-      </div>
-      <div class="login-content">
-         <form method="POST" action="">
-            <img src="">
-            <h2 class="title">BIENVENIDO</h2>
-            <?PHP
-            INCLUDE("conexion_bd.php");
-            include ("controlador.php");
-            ?>
-            <div class="input-div one">
-               <div class="i">
-                  <i class="fas fa-user"></i>
-               </div>
-               <div class="div">
-                  <h5>Usuario</h5>
-                  <input id="usuario" type="text" class="input" name="usuario">
-               </div>
+        <div class="login-content">
+            <div class="content">
+            <form method="POST" action="">
+                <img src="imagenes/logovierci.png" alt="Holiwis" class="avatar">
+                    <h1 class="title">BIENVENIDO</h1>
+                <?PHP
+                include("conexion_bd.php");
+                include("controlador.php");
+                ?>
+                <div class="form__usuario">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input id="usuario" type="text" class="input" name="usuario" placeholder="Usuario">
+                </div>
+                <div class="form__clave">
+                <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="input" class="input" name="password" placeholder="Password">
+                </div>
+                <input name="btningresar" class="btn" type="submit" value="INICIAR SESION">
+            </form>
             </div>
-            <div class="input-div pass">
-               <div class="i">
-                  <i class="fas fa-lock"></i>
-               </div>
-               <div class="div">
-                  <h5>Contraseña</h5>
-                  <input type="password" id="input" class="input" name="password">
-               </div>
-            </div>
-            <div class="view">
-               <div class="fas fa-eye verPassword" onclick="vista()" id="verPassword"></div>
-            </div>
-
-            <div class="text-center">
-               <a class="font-italic isai5" href="">Olvidé mi contraseña</a>
-               <a class="font-italic isai5" href="">Registrarse</a>
-            </div>
-            <input name="btningresar" class="btn" type="submit" value="INICIAR SESION">
-         </form>
-      </div>
-   </div>
-   <script src="js/fontawesome.js"></script>
-   <script src="js/main.js"></script>
-   <script src="js/main2.js"></script>
-   <script src="js/jquery.min.js"></script>
-   <script src="js/bootstrap.js"></script>
-   <script src="js/bootstrap.bundle.js"></script>
-
+        </div>
 </body>
-
-</html>
